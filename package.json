@@ -1,0 +1,36 @@
+{
+  "name": "busy-indicator",
+  "version": "0.0.1",
+  "description": "testing reusable busy indicator",
+  "main": "dist",
+  "keywords": [
+    "react",
+    "dark",
+    "night",
+    "mode",
+    "toggle",
+    "button"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir dist && uglifyjs dist/*.js -o dist/*.js ; cp ./src/animationData.json ./dist",
+    "prettify": "yarn prettier --write \"**/*.js\"",
+    "test": "jest"
+  },
+  "repository": "https://github.com/naigg/busy-indicator",
+  "author": "Gian Andres",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "uglify-js": "^3.7.7"
+  }
+}
