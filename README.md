@@ -13,13 +13,25 @@ npm i busy-indicator
 ## ✨ Usage
 
 ```javascript
-import BusyIndicator from "busy-indicator";
+import BusyIndicator, { BusyIndicatorContext }  from "busy-indicator";
+
+function DeepChild() {
+  const { showDisplay, hideDisplay } = useContext(BusyIndicatorContext);
+
+  return (
+    <div>
+      <button onClick={showDisplay}>Show</button>
+      <button onClick={hideDisplay}>Hide</button>
+    </div>
+  )
+}
 
 export default () => {
   return (
-    <BusyIndicator
-      test={true}
-    />
+    <BusyIndicator displayStyles={} displayContent={} >
+      ...
+      <ChildComponent />
+    </BusyIndicator>
   );
 };
 ```
@@ -28,7 +40,9 @@ export default () => {
 
 Prop                  | Type     | Default                   | Required
 --------------------- | -------- | ------------------------- | --------
-`test`|boolean|`false`|No
+`children`|any|`false`|No
+`displayStyles`|object|`{}`|No
+`displayContent`|(object|string)|`loading`|No
 
 ## ✌️ License
 [MIT](https://opensource.org/licenses/MIT)
