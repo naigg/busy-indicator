@@ -12,7 +12,7 @@
     "button"
   ],
   "scripts": {
-    "build": "babel src --out-dir dist && uglifyjs dist/*.js -o dist/*.js ; cp ./src/animationData.json ./dist",
+    "build": "babel src --out-dir dist && uglifyjs dist/*.js -o dist/*.js ./dist",
     "prettify": "yarn prettier --write \"**/*.js\"",
     "test": "jest"
   },
