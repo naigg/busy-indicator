@@ -5,14 +5,10 @@
   "main": "dist",
   "keywords": [
     "react",
-    "dark",
-    "night",
-    "mode",
-    "toggle",
-    "button"
+    "busy indicator"
   ],
   "scripts": {
-    "build": "babel src --out-dir dist && uglifyjs dist/*.js -o dist/*.js ./dist",
+    "build": "babel src --out-dir dist && uglifyjs dist/*.js",
     "prettify": "yarn prettier --write \"**/*.js\"",
     "test": "jest"
   },

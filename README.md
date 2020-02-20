@@ -1,4 +1,4 @@
-# @naigg/busy-indicator
+# busy-indicator
 
 A test using busy-indicator
 
@@ -7,13 +7,13 @@ A test using busy-indicator
 Using [`npm`]():
 
 ```bash
-npm i @naigg/busy-indicator
+npm i busy-indicator
 ```
 
 ## ✨ Usage
 
 ```javascript
-import BusyIndicator from "@naigg/busy-indicator";
+import BusyIndicator from "busy-indicator";
 
 export default () => {
   return (
