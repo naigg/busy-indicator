@@ -67,15 +67,17 @@ const BusyIndicator = ({
 
   return (
     <BusyIndicatorContext.Provider value={providerValue}>
-      {children}
-      {state && state.display ? (
-        <BusyIndicatorDisplay
-          displayStyles={displayStyles}
-          displayContent={displayContent}
-        />
-      ) : (
-        ""
-      )}
+      <React.Fragment>
+        {children}
+        {state && state.display ? (
+          <BusyIndicatorDisplay
+            displayStyles={displayStyles}
+            displayContent={displayContent}
+          />
+        ) : (
+          ""
+        )}
+      </React.Fragment>
     </BusyIndicatorContext.Provider>
   );
 };
