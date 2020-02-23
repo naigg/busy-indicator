@@ -1,4 +1,5 @@
 import React, { useReducer, createContext } from "react";
+import PropTypes from 'propTypes';
 
 const initialState = {
   display: false
@@ -11,12 +12,10 @@ const reducer = (state, action) => {
   switch (action.type) {
     case SHOW_DISPLAY:
       return {
-        ...state,
         display: true
       };
     case HIDE_DISPLAY:
       return {
-        ...state,
         display: false
       };
     default:
@@ -81,5 +80,16 @@ const BusyIndicator = ({
     </BusyIndicatorContext.Provider>
   );
 };
+
+BusyIndicator.defaultProps = {
+  displayStyles: {},
+  displayContent: "loading..."
+}
+
+BusyIndicator.propTypes = {
+  children: PropTypes.any.isRequired,
+  displayStyles: PropTypes.object,
+  displayContent: PropTypes.oneOf([PropTypes.object, PropTypes.string])
+}
 
 export default BusyIndicator;
